@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ws</title>
+</head>
+<body>
+<input id="msg" type="text">
+<button onclick="sendMsg()">send</button>
+
+<div id="chat_list" style="width: 500px; height: 500px; "></div>
+
+</body>
+<script type="text/javascript">
+    var  ws = new WebSocket("ws://127.0.0.1:666/ws")
+    ws.onmessage = function (data){
+        console.log(data.data);
+        var ptag = document.createElement("p")
+        ptag.innerText = data.data
+        document.getElementById("chat_list").appendChild(ptag)
+    }
+    function sendMsg(){
+        var msg = document.getElementById("msg").value;
+        ws.send(msg);
+        var ptag = document.createElement("h3")
+        ptag.innerText = msg
+        ptag.style = "float:right"
+        document.getElementById("chat_list").appendChild(ptag)
+    }
+</script>
+</html>
