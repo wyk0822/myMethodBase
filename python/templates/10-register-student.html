@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="010-register-student" method="post">
+        <p>
+            学员：
+            <select name="sid">
+                {% for stu in params.students %}
+                    <option value="{{stu.id}}">{{stu.sname}}</option>
+                {% endfor %}
+            </select>
+        </p>
+        <p>
+            老师：
+            <select name="tids" multiple>
+                {% for tea in params.teachers %}
+                    <option value="{{tea.id}}">{{tea.tname}}</option>
+                {% endfor %}
+            </select>
+        </p>
+        <input type="submit">
+        <input type="button" value="查看" onclick="location.href='/011-query';">
+    </form>
+</body>
+</html>
