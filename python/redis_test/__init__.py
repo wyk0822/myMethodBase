@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 # @author: wyk
-# @file: __init__.py
+# @file: update_server.py
 # @time: 2021/04/19
 # @Project: myMethodBase
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 4/12/2019 14:02
 # @Author  : MARX·CBR
-# @File    : __init__.py.py
+# @File    : update_server.py.py
 import threading
 import sys
 from PyQt5 import QtWidgets

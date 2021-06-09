@@ -21,7 +21,7 @@
        <string notr="true">font: 25 28pt &quot;Microsoft YaHei&quot;;</string>
       </property>
       <property name="text">
-       <string>软件更新示例</string>
+       <string>客户端更新</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
